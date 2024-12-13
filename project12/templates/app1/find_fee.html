@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if data == None %}
+    <h2>Please Select Course</h2>
+    {% endif %}
+    {% for coures in data %}
+    {% if coures == "java" %}
+    <h2>java fee 2000</h2>
+    {% endif %}
+    {% if coures == "python" %}
+    <h2>python fee 5000</h2>
+    {% endif %}
+    {% if coures == ".net" %}
+    <h2>.net fee 10000</h2>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>

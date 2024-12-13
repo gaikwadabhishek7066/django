@@ -1,0 +1,22 @@
+
+{%extends "app1/index.html"%}
+{% block content %}
+    <table>
+       <form action="/create_dept">
+        
+            <tr>
+                <td>Deptno</td>
+                <td><input type="text" name="deptno"></td>
+            </tr>
+            <tr>
+                <td>Dname</td>
+                <td><input type="text" name="dname"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="create"></td>
+            </tr>
+        
+       </form>
+    </table>
+    {{msg}}
+    {%endblock%}
