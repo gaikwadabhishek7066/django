@@ -1,0 +1,23 @@
+{%extends "app1/index.html"%}
+{%block content%}
+<table class="table table-bordered table-primary">
+<tr>
+    <th>ProductID</th>
+    <th>ProductName</th>
+    <th>Qty</th>
+    <th>Price </th>
+   
+</tr>
+{%for product in products%}
+<tr>
+    <td>{{product.prodid}}</td>
+    <td>{{product.prodname}}</td>
+    <td>{{product.qty}}</td>
+    <td>{{product.price}}</td>
+    
+</tr>
+{%endfor%}
+
+
+</table>
+{%endblock%}
