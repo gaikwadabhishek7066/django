@@ -1,0 +1,13 @@
+{%extends "app1/index.html"%}
+{%block content%}
+<table border="2" width="100%">
+    {%for row in qs%}
+    <tr>
+        <td>{{row.empno}}</td>
+        <td>{{row.ename}}</td>
+        <td>{{row.job}}</td>
+        <td>{{row.salary}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}
