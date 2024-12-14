@@ -1,0 +1,14 @@
+{%extends "app1/index.html"%}
+{%block content%}
+<body>
+
+
+<form method="post">
+    {% csrf_token %}
+    <table class="table table-bordered table-primary">
+{{form.as_table}}
+    </table>
+    <input type="submit" class="btn btn-primary" value="update">
+</form>
+</body>
+{%endblock%}

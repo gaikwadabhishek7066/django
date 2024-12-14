@@ -1,0 +1,29 @@
+{%extends "app1/index.html"%}
+{%block content%}
+<table class="table table-bordered table-primary">
+<tr>
+    <th>ProductID</th>
+    <th>ProductName</th>
+    <th>Qty</th>
+    <th>Price </th>
+    <th>Operation</th>
+</tr>
+{%for product in products%}
+<tr>
+    <td>{{product.prodid}}</td>
+    <td>{{product.prodname}}</td>
+    <td>{{product.qty}}</td>
+    <td>{{product.price}}</td>
+    <td><a href="{%url 'delete' product.prodid%}" class="btn btn-danger">Delete</a></td>
+    
+</tr>
+{%empty%}
+<tr>
+    <td colspan="5">Empty Products</td>
+    
+</tr>
+{%endfor%}
+</table>
+{%endblock%}
+
+
