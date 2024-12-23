@@ -8,16 +8,16 @@
 <body>
     <table border="1" width="100%">
         <tr>
-            <th>EmployeeNo</th>
-            <th>EmpoyeeName</th>
+            <th>Employee No</th>
+            <th>Employee Name</th>
             <th>Date of Joining</th>
         </tr>
         {% for empno,data in emp_data.items %}
    
     <tr>
         <td>{{empno}}</td>
-        <td>{{data.0}}</td>
-        <td>{{data.1 | date:"l d F Y"}}</td>
+        <td>{{data.0 | default:"undfined"}}</td>
+        <td>{{data.1 | default:"not assigned"}}</td>
     </tr>
     {% endfor %}
     </table>
