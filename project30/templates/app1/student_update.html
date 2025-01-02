@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Form container styling */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+
+
+/* Input and textarea styling */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Focus effect */
+input:focus, textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <form action="/update_view">
+        <table>
+            <tr>
+                <td>Rollno</td>
+                <td><input type="text" name="rollno" id=""></td>
+            </tr>
+            <tr>
+                <td>Subject-1 mark</td>
+                <td><input type="text" name="sub1" id=""></td>
+            </tr>
+            <tr>
+                <td>Subject-2 mark</td>
+                <td><input type="text" name="sub2" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Update"></td>
+            </tr>
+        </table>
+        {{msg}}
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #e0e0e0;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  table, th, td {
+    font-size: 14px;
+  }
+}
+
+    </style>
+
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <td>Rollno</td>
+            <td>Name</td>
+            <td>Subject-1</td>
+            <td>Subject-2</td>
+        </tr>
+        {% for row in s %}
+        <tr>
+            <td>{{row.rollno}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.sub1}}</td>
+            <td>{{row.sub2}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {{msg}}
+</body>
+</html>
