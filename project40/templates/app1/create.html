@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/create_view">
+        <table>
+            <tr>
+                <td>Dpt Id</td>
+                <td><input type="text" name="dpt_id" id=""></td>
+            </tr>
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="full_name" id="" required></td>
+            </tr>
+            <tr>
+                <td>Dpt</td>
+                <td><input type="text" name="dpt" id="" required></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="text" name="salary" id="" required></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Create" id="" required></td>
+                <td><a href="/list/">List Employee</a></td>
+            </tr>
+        </table>
+    </form>
+    {{msg}}
+</body>
+</html>

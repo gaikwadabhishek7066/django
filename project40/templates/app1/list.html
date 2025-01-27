@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <th>Dpt Id</th>
+            <th>Full Name</th>
+            <th>Dpt</th>
+            <th>Salary</th>
+        </tr>
+        {%for i in emp %}
+        <tr>
+            <td>{{i.dpt_id}}</td>
+            <td>{{i.full_name}}</td>
+            <td>{{i.dpt}}</td>
+            <td>{{i.salary}}</td>
+        </tr>
+        {%endfor %}
+    </table>
+    <a href="/index/">home</a>
+</body>
+</html>
