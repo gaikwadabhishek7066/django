@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #msg {
+            color: red;
+        }
+        #msg::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .submit {
+            margin-top: 10px;
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <form action="/login/" method="post">
+        {%csrf_token%}
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="Password1"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Login" id=""></td>
+            </tr>
+        </table>
+        {{error}}
+    </form>
+</body>
+</html>
