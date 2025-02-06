@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: aquamarine;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-top: 10px;
+        }
+        #msg {
+            color: red;
+        }
+        #submit {
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <form action="/update_view">
+        <table>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" name="title" id="" required></td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><input type="text" name="author" id=""></td>
+            </tr>
+            <tr>
+                <td>Publication_year</td>
+                <td><input type="text" name="publication_year" id=""></td>
+            </tr>
+            <tr>
+                <td>genre</td>
+                <td><input type="text" name="genre" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Add Book" id="submit"></td>
+            </tr>
+        </table>
+        {{msg}}
+    </form>
+</body>
+</html>
