@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            
+           
+            background-color: #f1f1f1;
+        }
+        h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+       .container {
+            width: 600px;
+            padding: 20px;
+            background-color: #904747;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ 
+       }
+       .img {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #btn {
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #e11717;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="img">
+         <h2>Upload Image</h2>
+           <form action="" method="post" enctype="multipart/form-data">
+             {% csrf_token %}
+             {{form}}
+             <input type="submit" value="Upload" id="btn">
+            </form>
+       </div>
+    </div>
+</div>
+<div class="display">
+{% for x in img %}
+<img src="{{x.photo.url}}" alt="" height="200px">
+</div>
+<div>
+ <small>{{x.date}}</small>
+</div>
+{% endfor %}
+</body>
+</html>
