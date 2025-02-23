@@ -1,0 +1,74 @@
+{% extends 'app1/base.html' %}
+{% block content%}
+<style>
+    .row {
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        border: 1px solid #ccc;
+        text-align: left;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+        padding: 20px;
+        box-sizing: border-box;
+
+    }
+    h4, form {
+        text-align: center;
+    }
+    button {
+        margin-top: 10px;
+        width: 30%;
+        background-color: palevioletred;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: darkred;
+        }
+
+    }
+    a {
+        text-decoration: none;
+        color: blue;
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-weight: bold;
+        &:hover {
+            color: darkblue;
+        }
+
+    }
+
+</style>
+<div class="row">
+    <div class="col-sm-6">
+        <h4>Update Sudent Information</h4>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="{% url 'addandshow' %}">Back To Home</a>
+        </form>
+    </div>
+</div>
+{% endblock content %}
