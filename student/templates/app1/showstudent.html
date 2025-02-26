@@ -1,0 +1,40 @@
+{% extends 'app1/home.html' %}
+{% block content%}
+<style>
+    .list {
+        padding-top: 20px;
+        
+        
+    }
+    table {
+       
+        background-color: azure;
+
+
+       
+
+    }
+   
+</style>
+<div class="body">
+    <div class="list">
+        <table border="2" width="100%">
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+            {% for s in students %}
+            <tr>
+                <td>{{s.name}}</td>
+                <td>{{s.roll_number}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.age}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+ </div>
+</div>
+{% endblock content%}
