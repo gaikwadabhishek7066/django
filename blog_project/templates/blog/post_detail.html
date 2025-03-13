@@ -1,0 +1,18 @@
+<h1>{{ post.title }}</h1>
+<p>{{ post.content }}</p>
+<p>By {{ post.author }}</p>
+
+<h2>Comments:</h2>
+{% for comment in comments %}
+    <p>{{ comment.name }}: {{ comment.body }}</p>
+{% endfor %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Comment</button>
+</form>
+
+<a href="{% url 'post_edit' post.pk %}">Edit</a>
+<a href="{% url 'post_delete' post.pk %}">Delete</a>
+<a href="{% url 'post_list' %}">Back to posts</a>
