@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            height: 50px;
+            width: 100%;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            
+            
+            
+        }
+        a {
+            text-decoration: none;
+            padding-left: 35px;
+            color: black;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/create_temp">Add Student</a>
+        <a href="/update_temp">Update Student</a>
+        <a href="/delete_temp">Delete Student</a>
+        <a href="/list">List Student</a>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

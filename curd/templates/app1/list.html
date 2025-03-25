@@ -1,0 +1,19 @@
+{% extends 'app1/base.html' %}
+{% block content %}
+<table border=1px width="100%">
+    <tr>
+       <th>Roll No</th>
+       <th>Name</th>
+       <th>Subject-1</th>
+       <th>Subject-2</th>
+    </tr>
+    {% for s in stud %}
+    <tr>
+        <td>{{s.roll_no}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.sub1}}</td>
+        <td>{{s.sub2}}</td>
+    </tr>
+    {% endfor%}
+</table>
+{% endblock %}
