@@ -1,0 +1,17 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+    <h2>Your Notes</h2>
+    {% for note in notes %}
+        <div>
+            <h3>{{note.title}}</h3>
+            <p>{{note.content}}</p>
+            <p><small>Created{{note.created_at}}</small></p>
+            <a href="{% url 'edit_note' note.id %}">✏ Edit</a>
+            <a href="{% url 'delete_note' note.id %}" onclick="return confirm('Are you sure?')">❌ Delete</a>
+        </div>
+        <hr>
+    {% empty %}
+        <p>No notes available.</p>
+    {% endfor %}
+{% endblock %}
