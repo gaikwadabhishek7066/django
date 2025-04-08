@@ -1,0 +1,50 @@
+{% extends 'data/home.html' %}
+{% block content %}
+<style>
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    table {
+        border-radius: 2px solid black;
+        background-color: rgb(255, 153, 0);
+        width: 300px;
+        padding-top: 10px;
+        height: 150px;
+        padding-left: 5px;
+        margin-top: 100px;
+    }
+    #add {
+        width: 70px;
+        padding-top: 5px;
+        margin-top: 5px;
+        background-color: blue;
+        color: aliceblue;
+        cursor: pointer;
+       
+    }
+</style>
+<form action="/addview/" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>Roll No</td>
+            <td><input type="text" name="roll_no" id=""></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" id=""></td>
+        </tr>
+        <tr>
+            <td>Marks</td>
+            <td><input type="text" name="marks" id=""></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Add" id="add"></td>
+        </tr>
+    </table>
+    
+</form>
+{{msg}}
+{% endblock %}
