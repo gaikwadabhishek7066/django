@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border:2px solid black;
+            padding: 20px;
+            margin-left:500px;
+            margin-top: 200px;
+        }
+        tr 
+        {
+            padding: 20px;
+            font-size: xx-large;
+
+
+        }
+        #btn {
+            background-color: blue;
+            color: aliceblue;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="/add_stud">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" id=""></td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td><input type="text" name="course" id=""></td>
+            </tr>
+            <tr>
+                <td>Fees</td>
+                <td><input type="text" name="fees" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Add" id="btn"></td>
+            </tr>
+        </table>
+        {{msg}}
+    </form>
+    
+</body>
+</html>
