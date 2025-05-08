@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            background-color: rgb(212, 227, 227);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 500px;
+            margin-left: 400px;
+            margin-top: 200px;
+        }
+        
+        #btn {
+            margin-left: 30px;
+            background-color: blue;
+            color: aliceblue;
+            cursor: pointer;
+            width: 50px;
+            margin-top: 10px;
+           
+        }
+        .msg {
+            margin-left: 400px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action="/singin">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="pwd"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="login" id="btn"></td>
+            </tr>
+           
+        </table>
+        
+    </form>
+    <div class="msg">
+        {{msg}}
+    </div>
+</body>
+</html>
