@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container{
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .container h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .details{
+            margin-bottom: 15px;
+        }
+        .details label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .details input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+
+        }
+        .btn{
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="/form">
+            <div class="details">
+                <label for="">Name</label>
+                <input type="text" name="name" id="" placeholder="Enter your name">
+            </div>
+            <div class="details">
+                <label for="">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="details">
+                <label for="">Login ID</label>
+                <input type="text" name="loginid" id="">
+            </div>
+            <div class="details">
+                <label for="">Password</label>
+                <input type="password" name="password" id="">
+            </div>
+            <div class="details">
+                <label for="">Contact Number</label>
+                <input type="text" name="number" id="">
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</body>
+{{msg}}
+
+</html> 
