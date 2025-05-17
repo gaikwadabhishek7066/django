@@ -1,0 +1,51 @@
+{% extends 'app1/home.html'%}
+{% block content %}
+<style>
+    h1 {
+        margin-left: 40%;
+    }
+    p {
+        margin-left: 40%;
+        font-size: 18px;
+    }
+    .info {
+        margin-left: 40%;
+        padding-top: 10px;
+    }
+    .info label {
+      font-weight: bold;
+    }
+    .info input {
+        padding: 6x;
+    }
+    button {
+        margin-left: 40%;
+        margin-top: 10px;
+        padding: 4px;
+        width: 100px;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+    } 
+    .cnacle {
+       margin-left: 40%;
+       margin-top: 7px;
+
+
+    }
+
+</style>
+<h1>Delete Employee</h1>
+<p>Are you sure you want to delete data?</p>
+<form action="/delete_view">
+  <div class="info">
+    <label for="">Employee ID</label>
+    <input type="text" name="emp_id" id="" required>
+  </div>
+  <div class="cnacle">Are your sure to <b>Cancle</b> Click Here --> <a href="/list">Cancle <--</a></div>
+  <button type="submit">Yes, delete</button>
+</form>
+{{msg}}
+{% endblock content%}

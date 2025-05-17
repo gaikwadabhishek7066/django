@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(199, 199, 126);
+            
+            
+        }
+        li {
+            list-style: none;
+            
+        }
+        a {
+            text-decoration: none;
+            font-size: 19px;
+            
+        }
+      
+    </style>
+</head>
+<body>
+    <nav>
+        <li><a href="/add_view">Add Emp</a></li>
+        <li><a href="/list">List Emp</a></li>
+        <li><a href="/update">Update</a></li>
+        <li><a href="/delete">Delete</a></li>
+    </nav>
+    {% block content %}
+    {% endblock content%}
+</body>
+</html>

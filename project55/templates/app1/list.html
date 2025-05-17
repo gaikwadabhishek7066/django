@@ -1,0 +1,17 @@
+{% extends 'app1/home.html'%}
+{% block content %}
+<table border="1" width="100%">
+    <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+     {% for i in emp %}
+     <tr>
+        <td>{{i.emp_id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.salary}}</td>
+     </tr>
+     {% endfor %}
+</table>
+{% endblock content%}

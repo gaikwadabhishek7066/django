@@ -1,0 +1,54 @@
+{% extends 'app1/home.html'%}
+ {% block content %}
+ <style>
+    h2 {
+       text-align: center;
+       
+
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+    
+       
+        }
+    
+        .update label {
+            display: block;
+            font-weight: bold;
+            padding-bottom: 10px;
+            padding-top: 2px;
+        }
+        .update input {
+            padding-bottom: 10px;
+            width: 100%;
+        }
+        #btn {
+            margin-top: 10px;
+            width: 100%;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            cursor: pointer;
+            color: white;
+
+        }
+ </style>
+ <h2>Update Employee</h2>
+ <div class="container">
+    
+    <form action="/update_view">
+        <div class="update">
+            <label for="">Employee ID</label>
+            <input type="text" name="emp_id" id="">
+        </div>
+        <div class="update">
+            <label for="">Salary</label>
+            <input type="text" name="salary" id="">
+        </div>
+        <div><input type="submit" value="Update" id="btn"></div>
+    </form>
+ </div>
+  {{msg}}
+ {% endblock content%}
