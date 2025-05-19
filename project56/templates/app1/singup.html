@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aliceblue;
+            background-attachment: fixed;
+        }
+        .container {
+            background-color: white;
+            height: 420px;
+            width: 400px;
+           
+        }
+        h2 {
+            text-align: center;
+            color: green;
+        }
+        p {
+            font-size: 13px;
+            margin-left: 45px;
+            padding-bottom: 5px;
+            
+        }
+        .info input {
+           margin-left: 20px;
+            padding: 7px;
+            margin-bottom: 15px;
+            width: 80%;
+        }
+        #btn {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+           
+            
+        }
+        .p {
+            margin-left: 50px;
+            font-size: 14px;
+            
+            
+        }
+        .p a {
+            text-decoration: none;
+            
+        }
+        .msg {
+            color: green;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/sign">
+            <h2>Sign Up</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+           <div class="info">
+            <input type="text"name="name"placeholder="name name" required><br>
+            <input type="text" name="phone" placeholder="phone" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="pwd" placeholder="password" required><br>
+            <input type="submit" value="Sign Up" id="btn">
+           </div>
+           <p class="msg">{{msg}}</p>
+           <p class="p">Already have an account ? <a href="/login/">Log in</a> </p>
+        </form>
+    </div>
+</body>
+</html>
