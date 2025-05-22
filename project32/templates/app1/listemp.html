@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+       <tr>
+        <th>empno</th>
+        <th>empname</th>
+        <th>job</th>
+        <th>Salary</th>
+        <th>dept</th>
+       </tr>
+       {% for data in qs%}
+       <tr>
+        <td>{{data.empno}}</td>
+        <td>{{data.ename}}</td>
+        <td>{{data.job}}</td>
+        <td>{{data.sal}}</td>
+        <td>{{data.dept}}</td>
+       </tr>
+       {%endfor%}
+    </table>
+</body>
+</html>

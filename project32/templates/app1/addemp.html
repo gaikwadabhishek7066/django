@@ -1,0 +1,32 @@
+<table>
+    <form action="/create_emp">
+        <tr>
+            <td>EmpNo</td>
+            <td><input type="text" name="empno"></td>
+        </tr>
+        <tr>
+            <td>EmpName</td>
+            <td><input type="text" name="ename"></td>
+        </tr>
+        <tr>
+            <td>Job</td>
+            <td><input type="text" name="job"></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type="text" name="sal"></td>
+        </tr>
+        <tr>
+            <td>Deptno</td>
+            <td><select name="deptno">
+                {% for deptno in dept %}
+                <option value="{{deptno}}">{{deptno}}</option>
+                {%endfor%}
+            </select></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Create" id=""></td>
+        </tr>
+    </form>
+</table>
+{{msg}}
