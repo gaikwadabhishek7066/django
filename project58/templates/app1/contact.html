@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            background-color: orange;
+            text-align: center;
+            color: white;
+            
+        }
+        p {
+            color: green;
+            text-align: center;
+        }
+         .container {
+          height: 270px;
+          width: 350px;
+          background-color: rgb(190, 225, 225);
+          margin-left: 500px;
+          padding: 10px;
+        }
+       .info {
+        margin-left: 10px;
+        padding-bottom: 10px;
+       }
+       label {
+        display: block;
+        font-weight: bold;
+
+       }
+       input {
+        width: 90%;
+        padding-bottom: 5px;
+       }
+       button {
+        width: 90%;
+        margin-left: 8px;
+        margin-top: 8px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    {% if success %}
+        <p>Message sent Successfully!</p>
+    {% endif %}
+
+    {% if errors %}
+    <ul style="color: red;">
+        {% for error in errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <div class="info">
+                <label for="">Name</label>
+                <input type="text" name="name" id="" required>
+            </div>
+             <div class="info">
+                <label for="">Email</label>
+                <input type="email" name="email" id="" required>
+            </div>
+             <div class="info">
+                <label for="">Subject</label>
+                <input type="text" name="subject" id="" required>
+            </div>
+             <div class="info">
+                <label for="">message</label>
+                <input type="text" name="message" id="" required>
+            </div>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</body>
+</html>
