@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/view_emp">
+        <table border="1" width="100%">
+            <tr>
+                <td>Job</td>
+                <td>
+                    <select name="job" id="">
+                        <option value="manager">MANAGER</option>
+                        <option value="hr">HR</option>
+                        <option value="acc">ACCOUNT</option>
+                        <option value="employee">EMPLOYEE</option>
+                        <option value="all">ALL</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="submit" value="View Employee" id="">
+                </td>
+            </tr>
+        </table>
+    </form>
+    {% block table %}
+    {% endblock %}
+</body>
+</html>

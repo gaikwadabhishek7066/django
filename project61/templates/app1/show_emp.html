@@ -1,0 +1,19 @@
+{%extends 'app1/view_emp.html'%}
+{%block table%}
+<table border="1" width="100%">
+    <tr>
+        <th>Empno</th>
+        <th>EmployeeName</th>
+        <th>Job</th>
+        <th>Salary</th>
+    </tr>
+    {% for e in qs %}
+    <tr>
+        <td>{{e.empno}}</td>
+        <td>{{e.ename}}</td>
+        <td>{{e.job}}</td>
+        <td>{{e.salary}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{%endblock%}
